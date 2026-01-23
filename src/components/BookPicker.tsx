@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Book } from '../interfaces/Book';
+import type { Book } from '../interfaces/Book';
 import { books as booksData } from '../data/books';
 
 const BookPicker = () => {
@@ -9,6 +9,7 @@ const BookPicker = () => {
   const [lastPickDate, setLastPickDate] = useState<string | null>(null);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setBooks(booksData);
     const today = new Date().toLocaleDateString();
     const storedLastPickDate = localStorage.getItem('lastPickDate');

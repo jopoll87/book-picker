@@ -1,4 +1,4 @@
-import { Book } from '../interfaces/Book';
+import type { Book } from '../interfaces/Book';
 
 export const books: Book[] = [
   { id: 1, title: "The Hitchhiker's Guide to the Galaxy" },
